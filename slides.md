@@ -5,12 +5,11 @@ theme: seriph
 # like them? see https://unsplash.com/collections/94734566/slidev
 background: https://cover.sli.dev
 # some information about your slides (markdown enabled)
-title: Welcome to Slidev
+title: モブワークによるSECIモデルの実践
 info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
+  PHP Conference Japan 2025  
+  https://phpcon.php.gr.jp/2025/
 
-  Learn more at [Sli.dev](https://sli.dev)
 # apply unocss classes to the current slide
 class: text-center
 # https://sli.dev/features/drawing
@@ -26,20 +25,24 @@ addons:
   - slidev-addon-rabbit
 ---
 
-# Welcome to Slidev
+# モブワークによるSECIモデルの実践
+PHP Conference Japan 2025 Jul 19, 2025.  
+v0.0.1  
+@katzumi(かつみ)
 
-Presentation slides for developers @ v0.1.11
-
-<div @click="$slidev.nav.next" class="mt-12 py-1" hover:bg="white op-10">
-  Press Space for next page <carbon:arrow-right />
+<div class="pt-12">
+  <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
+    Press Space for next page <carbon:arrow-right class="inline"/>
+  </span>
 </div>
 
-<div class="abs-br m-6 text-xl">
-  <button @click="$slidev.nav.openInEditor" title="Open in Editor" class="slidev-icon-btn">
+<div class="abs-br m-6 flex gap-2">
+  <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
     <carbon:edit />
   </button>
-  <a href="https://github.com/k2tzumi/slidev-boilerplate" target="_blank" class="slidev-icon-btn">
-    <carbon:logo-github />
+  <a href="https://github.com/k2tzumi/decision-table-implementation-tips" target="_blank" alt="GitHub" title="Open in GitHub"
+    class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
+    <carbon-logo-github />
   </a>
 </div>
 
@@ -49,28 +52,35 @@ The last comment block of each slide will be treated as slide notes. It will be 
 
 ---
 transition: fade-out
+layout: two-cols-header
 ---
 
-# What is Slidev？
+# 自己紹介
 
-Slidev is a slides maker and presenter designed for developers, consist of the following features
+katzumi（かつみ）と申します。
 
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - themes can be shared and re-used as npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embed Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export to PDF, PPTX, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - virtually anything that's possible on a webpage is possible in Slidev
-<br>
-<br>
+「障害のない社会をつくる」をビジョンに掲げている「LITALICO」という会社に所属しています
+<a href="https://litalico.co.jp/">
+<img src="https://litalico.co.jp/ogp.png" class="w-40" />
+</a>
 
-Read more about [Why Slidev?](https://sli.dev/guide/why)
+以下のアカウントで活動しています。
 
-<!--
-You can have `style` tag in markdown to override the style for the current page.
-Learn more: https://sli.dev/features/slide-scope-style
--->
+::left::
+
+<div class="float-left">
+<img src="https://pbs.twimg.com/profile_images/1768978237210935296/idy9J4l6_400x400.jpg" class="rounded-full w-40 mr"/>  
+<simple-icons-x /> <a href="https://twitter.com/katzchum">katzchum</a></div>  
+<QRCode :width="180" :height="180" value="https://twitter.com/katzchum" color="4329B9" image="Logo_of_X.svg" />
+
+::right::
+
+<img src="https://avatars.githubusercontent.com/u/1182787?v=4" class="rounded-full w-40 mr-12"/>
+
+<logos-github-octocat /> [k2tzumi](https://github.com/k2tzumi)  
+<simple-icons-zenn /> [katzumi](https://zenn.dev/katzumi)  
+
+<br />
 
 <style>
 h1 {
@@ -84,564 +94,311 @@ h1 {
 }
 </style>
 
-<!--
-Here is another comment.
--->
-
 ---
-transition: slide-up
-level: 2
+layout: two-cols-header
+transition: fade-out
 ---
 
-# Navigation
 
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/ui#navigation-bar)
+# お願い 🙏
 
-## Keyboard Shortcuts
+写真撮影、SNS での実況について
 
-|                                                     |                             |
-| --------------------------------------------------- | --------------------------- |
-| <kbd>right</kbd> / <kbd>space</kbd>                 | next animation or slide     |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd>                                       | previous slide              |
-| <kbd>down</kbd>                                     | next slide                  |
+登壇者の励みになるので是非ともご意見やご感想など、フィードバック頂けると助かります mm  
+あとでスライドを公開します
 
-<!-- https://sli.dev/guide/animations.html#click-animation -->
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-  alt=""
-/>
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
+::left::
 
----
-layout: two-cols
-layoutClass: gap-16
----
-
-# Table of contents
-
-You can use the `Toc` component to generate a table of contents for your slides:
-
-```html
-<Toc minDepth="1" maxDepth="1" />
-```
-
-The title will be inferred from your slide content, or you can override it with `title` and `level` in your frontmatter.
+<Transform :scale="2.5">
+　　　🙆‍♀📷<ph-projector-screen-chart-light /><br />
+　　　🙅‍♂📹💸<br />
+　　　🙅📸👨‍👦‍👦<br />
+</Transform>
 
 ::right::
 
-<Toc text-sm minDepth="1" maxDepth="2" />
+<br />
+<Transform :scale="2">
+<fa6-brands-square-x-twitter />
+</Transform>
+<br />
+<a href="https://x.com/search?q=%23phpkansai&f=live">#phpkansai</a>
+
+
+<!-- 本セッションでは、撮影やSNS拡散を歓迎しています。ご自由に写真を撮影して、XなどのSNSでシェアしてください。 　　
+ただし、以下の点にご注意ください。　　
+
+著作権などの法的な問題を避けるために、スライドや登壇者の写真や動画を無断で商用利用しないでください。　　
+他の参加者のプライバシーや迷惑にならないように、撮影や投稿する際には配慮してください。　　
+SNSでシェアする際には、ハッシュタグ「#phpcon_nagoya #s」をつけてください。　　
+これにより、本セッションの関連情報を簡単に検索できるようになります。 -->
 
 ---
-layout: image-right
-image: https://cover.sli.dev
+layout: default
+transition: slide-up
 ---
 
-# Code
+# はじめに
+セッションの概要と目的。お断りとか
 
-Use code snippets and get the highlighting directly, and even types hover！
-
-```ts {all|5|7|7-8|10|all} twoslash
-// TwoSlash enables TypeScript hover information
-// and errors in markdown code blocks
-// More at https://shiki.style/packages/twoslash
-
-import { computed, ref } from 'vue'
-
-const count = ref(0)
-const doubled = computed(() => count.value * 2)
-
-doubled.value = 2
-```
-
-<arrow v-click="[4, 5]" x1="350" y1="310" x2="195" y2="334" color="#953" width="2" arrowSize="1" />
-
-<!-- This allow you to embed external code blocks -->
-<<< @/snippets/external.ts#snippet
-
-<!-- Footer -->
-
-[Learn more](https://sli.dev/features/line-highlighting)
-
-<!-- Inline style -->
-<style>
-.footnotes-sep {
-  @apply mt-5 opacity-10;
-}
-.footnotes {
-  @apply text-sm opacity-75;
-}
-.footnote-backref {
-  display: none;
-}
-</style>
-
-<!--
-Notes can also sync with clicks
-
-[click] This will be highlighted after the first click
-
-[click] Highlighted with `count = ref(0)`
-
-[click:3] Last click (skip two clicks)
--->
-
----
-level: 2
----
-
-# Shiki Magic Move
-
-Powered by [shiki-magic-move](https://shiki-magic-move.netlify.app/), Slidev supports animations across multiple code snippets.
-
-Add multiple code blocks and wrap them with <code>````md magic-move</code> (four backticks) to enable the magic move. For example:
-
-````md magic-move {lines: true}
-```ts {*|2|*}
-// step 1
-const author = reactive({
-  name: 'John Doe',
-  books: [
-    'Vue 2 - Advanced Guide',
-    'Vue 3 - Basic Guide',
-    'Vue 4 - The Mystery'
-  ]
-})
-```
-
-```ts {*|1-2|3-4|3-4,8}
-// step 2
-export default {
-  data() {
-    return {
-      author: {
-        name: 'John Doe',
-        books: [
-          'Vue 2 - Advanced Guide',
-          'Vue 3 - Basic Guide',
-          'Vue 4 - The Mystery'
-        ]
-      }
-    }
-  }
-}
-```
-
-```ts
-// step 3
-export default {
-  data: () => ({
-    author: {
-      name: 'John Doe',
-      books: [
-        'Vue 2 - Advanced Guide',
-        'Vue 3 - Basic Guide',
-        'Vue 4 - The Mystery'
-      ]
-    }
-  })
-}
-```
-
-Non-code blocks are ignored.
-
-```vue
-<!-- step 4 -->
-<script setup>
-const author = {
-  name: 'John Doe',
-  books: [
-    'Vue 2 - Advanced Guide',
-    'Vue 3 - Basic Guide',
-    'Vue 4 - The Mystery'
-  ]
-}
-</script>
-```
-````
+* **🙇PHPの直接的な技術トピックは出てきません**  
+* **対象となる聴衆**  
+モブワークに興味がある（実践している）方・複雑なドメインを扱っている方
+* **本セッションの位置づけ**  
+技術的な内容ではなく、チーム開発プロセスと知識共有の方法論に焦点  
+5年間のモブワークの実践を通じて得られた知見に基づきます。
+* **本セッションの主な狙い**  
+プロジェクトへのモブワーク導入を検討するきっかけの提供
 
 ---
 
-# Components
+# モブワーク（モブプログラミング）とは何か
+ソフトウェア・チーミングのスタイルの一種
 
-<div grid="~ cols-2 gap-4">
-<div>
+* **定義**  
+**モブワーク（モブプログラミング）**：チーム全員が同じ時間、同じ場所、同じコンピュータで一つのタスクに取り組む開発手法
 
-You can use Vue components directly inside your slides.
-
-We have provided a few built-in components like `<Tweet/>` and `<Youtube/>` that you can use directly. And adding your custom components is also super easy.
-
-```html
-<Counter :count="10" />
-```
-
-<!-- ./components/Counter.vue -->
-<Counter :count="10" m="t-4" />
-
-Check out [the guides](https://sli.dev/builtin/components.html) for more.
-
-</div>
-<div>
-
-```html
-<Tweet id="1390115482657726468" />
-```
-
-<Tweet id="1390115482657726468" scale="0.65" />
-
-</div>
-</div>
-
-<!--
-Presenter note with **bold**, *italic*, and ~~striked~~ text.
-
-Also, HTML elements are valid:
-<div class="flex w-full">
-  <span style="flex-grow: 1;">Left content</span>
-  <span>Right content</span>
-</div>
--->
+  <blockquote>
+  <p>「すべての優秀な人材が、同じ時に同じ場所で、同じコンピュータで協力して一つのことに取り組む」</p>
+  <p> - Woody Zuill（モブプログラミングの提唱者）</p>
+  </blockquote>
+* **チームの役割分担（ロール）**  
+**ドライバー**：キーボードとマウスを操作する人（定期的に交代）  
+**ナビゲーター**：次に何をすべきか指示する人  
+**モブ（集団）**：アイデアを出し合い、問題解決に参加するチームメンバー全員
 
 ---
-class: px-20
+layout: two-cols-header
 ---
 
-# Themes
+# モブワーク（モブプログラミング）とは何か
 
-Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
+::left::
 
-<div grid="~ cols-2 gap-2" m="t-2">
+* **モブワークの基本的な考え方**  
+  - 個人の暗黙知をリアルタイムでチーム全体に共有
+  - 複数の視点と知識を組み合わせた問題解決
+  - コードレビューをリアルタイムで行い、品質向上
+  - 知識の偏りを減らし、「部族の記憶」を形成
+  - チーム全体での学習と成長を促進
+* **実施方法**  
+  - 5〜15分程度の短いサイクルでドライバーを交代
+  - 全員が発言できる雰囲気づくり
+  - タイマーを使った時間管理
+  - 定期的な振り返りを通じたプロセス改善
+  - 対面またはリモートで実施可能（画面共有ツールの活用）
 
-```yaml
----
-theme: default
----
-```
+::right::
 
-```yaml
----
-theme: seriph
----
-```
+* **ペアプログラミングとの違い**  
+  - ペアプログラミング：2人で行う
+  - モブプログラミング：3人以上のチーム全体で行う
+  - より多様な知識と視点が集まる
+  - チーム全体での合意形成と知識共有が促進される
 
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true" alt="">
+----
 
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true" alt="">
+# SECIモデルの概要
 
-</div>
-
-Read more about [How to use a theme](https://sli.dev/guide/theme-addon#use-theme) and
-check out the [Awesome Themes Gallery](https://sli.dev/resources/theme-gallery).
+* **SECI（セキ）モデルとは？**  
+個人の知識や経験を組織全体で共有・活用し、新たな知識を創造するサイクル　　
+  - 野中郁次郎氏らが提唱した知識創造の理論
+  - 暗黙知と形式知の相互変換を通じて知識を創造・発展させる
+  - 4つのプロセスを繰り返し螺旋状に発展する「知識スパイラル」
 
 ---
 
-# Clicks Animations
+# 知識創造の4つのプロセス
 
-You can add `v-click` to elements to add a click animation.
+<Transform :scale="0.7">
 
-<div v-click>
+<img src="/seci-model-diagram.svg" />
 
-This shows up when you click the slide:
+</Transform>
 
-```html
-<div v-click>This shows up when you click the slide.</div>
-```
+----
 
-</div>
 
-<br>
 
-<v-click>
+# モブワークとは
 
-The <span v-mark.red="3"><code>v-mark</code> directive</span>
-also allows you to add
-<span v-mark.circle.orange="4">inline marks</span>
-, powered by [Rough Notation](https://roughnotation.com/):
+モブプログラミングとは、ソフトウェア開発手法の一つであり、チーム全体が一つのタスクに同時に取り組む集団作業のコンセプトです。2011年にWoody Zuill氏によって提唱されたもので、ペアプログラミングを拡張し、チームメンバー全員を含めるようにスケールアップした「進化的なステップ」と定義されています。
+この手法の基本的な考え方は、**一つのチーム、一つの（アクティブな）キーボード、一つの画面（プロジェクター）**で作業することです。チームメンバー全員が同じコンピュータシステムを使い、同じ画面を見ながら、同じ時間を共有し、同じ問題を解決します。作業は一つのタスクに非常に集中的に行われます。
+モブプログラミングにおけるチームの役割分担として、一人のメンバーがドライバーとしてコードを書くという機械的なタイピング作業を担当し、残りのメンバーはナビゲーターとして問題解決を共同で行い、ドライバーに指示を出します。ドライバーの役割は定期的にメンバー間でローテーションされます。
+チームの構成は開発者に限定されず、プロダクトオーナー、テスター、UI/UXスタッフなども参加することが可能です。チームの規模について明確な答えはありませんが、チーム自身が最適なものを決定するとされており、一般的には3人以上、推奨としては4〜5人で行われることが多いようです。
+モブプログラミングの目的は、チームが共同で作業し、共有し、学ぶことを通じて、チームの生産性を向上させることです。これにより、会社の成長だけでなく、メンバー個々の成長にもつながる生産的なミーティングを実現することが目指されます。主な利点としては、チーム内の知識共有の促進、コード品質の向上、メンバーの学習機会の促進、問題解決能力の向上、属人性の解決、コードレビューコストの低減、新規メンバーのオンボーディングのスムーズ化、開発中のハマり防止 などが挙げられます。
+効率という観点では、個人の時間の有効活用である「リソース効率」よりも、**チーム全体の成果物を作り出す「フロー効率」**を重視する考え方が根底にあります。全員が一つのタスクに集中することで、タスクの完了速度が向上し、次のタスクへの移行がスムーズになる可能性があります。
+最終的に、モブプログラミングは「個人 vs タスク」という意識から、「チーム vs 問題」という意識への変化を促すテクニックであるとされています。
 
-```html
-<span v-mark.underline.orange>inline markers</span>
-```
-
-</v-click>
-
-<div mt-20 v-click>
-
-[Learn more](https://sli.dev/guide/animations#click-animation)
-
-</div>
 
 ---
 
-# Motions
+# モブプログラミングが開発者のウェルビーイングに与える主なポジティブな影響
 
-Motion animations are powered by [@vueuse/motion](https://motion.vueuse.org/), triggered by `v-motion` directive.
+* 知識共有と学習の促進  
+チームメンバーは互いに学び合い、自身の知識を共有することができます。これにより、チーム全体の理解が深まります。新しい技術や手法を学ぶ機会が増え、特に経験の浅いメンバーにとっては、経験豊富なメンバーから直接学ぶことができるため、学習機会が促進されます。また、新規メンバーのオンボーディングプロセスがスムーズになり、チームに早く馴染むことができます。
 
-```html
-<div
-  v-motion
-  :initial="{ x: -80 }"
-  :enter="{ x: 0 }"
-  :click-3="{ x: 80 }"
-  :leave="{ x: 1000 }"
->
-  Slidev
-</div>
-```
+* チームコミュニケーションと人間関係の向上  
+チーム全体で同じタスクに取り組むため、メンバー間のコミュニケーションが増加し、よりオープンな議論の環境が生まれます。これにより、チーム内の人間関係構築にも良い影響があると報告されています。通常あまり話さないメンバーとも話す機会ができ、良好な関係構築につながるという意見もあります。
 
-<div class="w-60 relative">
-  <div class="relative w-40 h-40">
-    <img
-      v-motion
-      :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-square.png"
-      alt=""
-    />
-    <img
-      v-motion
-      :initial="{ y: 500, x: -100, scale: 2 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-circle.png"
-      alt=""
-    />
-    <img
-      v-motion
-      :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-triangle.png"
-      alt=""
-    />
-  </div>
+* 問題解決の効率化と共同作業による安心感
+複雑な問題に取り組む際に、4〜5人のスキルと知識を合わせて議論することで、一人で考えるよりも早く解決策にたどり着けると述べられています。チーム全体で問題に立ち向かうという意識が醸成されます。意見の衝突があった場合でも、グループで扱うことで対処しやすくなるという意見もあります。また、共同で作業することで「ハマりづらくなる」という利点も指摘されています。複数人の視点や知識があるため、一人で思い込みに囚われるリスクが減ります。
 
-  <div
-    class="text-5xl absolute top-14 left-40 text-[#2B90B6] -z-1"
-    v-motion
-    :initial="{ x: -80, opacity: 0}"
-    :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
-    Slidev
-  </div>
-</div>
+• 個人プレッシャーの軽減
+タスクをチーム全体で共有して取り組むことで、個人の作業負荷やプレッシャーが軽減されると感じるメンバーもいます。これは、チームと個人レベルの両方に利益をもたらすとされています。
 
-<!-- vue script setup scripts can be directly used in markdown, and will only affects current page -->
-<script setup lang="ts">
-const final = {
-  x: 0,
-  y: 0,
-  rotate: 0,
-  scale: 1,
-  transition: {
-    type: 'spring',
-    damping: 10,
-    stiffness: 20,
-    mass: 2
-  }
-}
-</script>
+• 属人性の解消とコード品質向上  
+チーム全体でコードを共有し、議論しながら書くことで、特定の個人しか理解できないコード（属人性）が解消されます。複数の視点から検討されるため、より質の高いコードが書かれやすくなると考えられています。また、作業中にコードレビューが同時に行われるため、レビューにかかるコストが低減されるというメリットもあります。
 
-<div
-  v-motion
-  :initial="{ x:35, y: 30, opacity: 0}"
-  :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
+• 楽しさ
+一緒に作業すること自体を楽しんでいるという意見も聞かれます。
 
-[Learn more](https://sli.dev/guide/animations.html#motion)
+----
 
-</div>
+# モブプログラミングの潜在的な課題
+
+* チーム内の衝突  
+チームメンバー間の衝突が増加する可能性があることが指摘されています。ただし、これが必ずしも悪いわけではないという意見もあれば、ストレスや不快感につながるという意見もあります。特に人間関係に関する衝突は、チームメンバーの満足度と負の相関があることが研究で示唆されています。
+
+* 疲労  
+モブプログラミングは集中力が必要なため、疲れると感じるメンバーもいるようです。特に慣れていない場合、負担になる可能性があります。定期的な休憩を取ることが推奨されています。
+
+* 参加度の不均一性  
+チームメンバー全員が常に等しく貢献するとは限りません。一部のメンバーが積極的に参加せず、「内職」をしてしまうといった問題が発生する可能性があります。また、議論のスピードについていけないメンバーがいる場合、そのメンバーのモブプログラミング体験が損なわれる可能性があります。
+
+* 個人時間の制約  
+すべての開発作業をモブプログラミングで行う場合、個人の学習や業務目標達成のための時間が確保しづらくなるという問題点も指摘されています。
 
 ---
 
-# LaTeX
-
-LaTeX is supported out-of-box. Powered by [KaTeX](https://katex.org/).
-
-<div h-3 />
-
-Inline $\sqrt{3x-1}+(1+x)^2$
-
-Block
-$$ {1|3|all}
-\begin{aligned}
-\nabla \cdot \vec{E} &= \frac{\rho}{\varepsilon_0} \\
-\nabla \cdot \vec{B} &= 0 \\
-\nabla \times \vec{E} &= -\frac{\partial\vec{B}}{\partial t} \\
-\nabla \times \vec{B} &= \mu_0\vec{J} + \mu_0\varepsilon_0\frac{\partial\vec{E}}{\partial t}
-\end{aligned}
-$$
-
-[Learn more](https://sli.dev/features/latex)
+モブプログラミングはチームワーク、知識共有、問題解決といった側面から開発者のウェルビーイングに多くのポジティブな影響をもたらす可能性があります。しかし、チーム内の人間関係や個人の特性、適切な役割分担と進行方法などがウェルビーイングに影響を与えるため、これらの課題に適切に対処しながら実践することが重要
 
 ---
 
-# Diagrams
+# モブプログラミングの利点
 
-You can create diagrams / graphs from textual descriptions, directly in your Markdown.
+* 知識共有と学習の促進  
+チーム全体で同じコードを見ながら作業することで、知識や経験が自然と共有されます。特に新しい技術やフレームワークの学習、経験の浅いメンバーの教育に有効です。オンボーディングにも役立ちます。
 
-<div class="grid grid-cols-4 gap-5 pt-4 -mb-6">
+* コード品質の向上  
+複数の視点や専門知識が組み合わさることで、質の高いコードが書かれやすくなります。作業中にリアルタイムでコードレビューが行われるため、レビューコストが低減されます。
 
-```mermaid {scale: 0.5, alt: 'A simple sequence diagram'}
-sequenceDiagram
-    Alice->John: Hello John, how are you?
-    Note over Alice,John: A typical interaction
-```
+* 問題解決能力の向上  
+複雑な問題や未知の問題に対して、多くの視点を組み合わせて解決策を見つけるのに適しています。チーム全体で取り組むことで、「ハマりづらくなる」可能性が圧倒的に低くなります。
 
-```mermaid {theme: 'neutral', scale: 0.8}
-graph TD
-B[Text] --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
-```
+* チームコミュニケーションの活性化  
+メンバー間のコミュニケーションが増加し、よりオープンな議論が生まれます。リモートワーク環境でのコミュニケーション不足の解消にもつながり得ます。
 
-```mermaid
-mindmap
-  root((mindmap))
-    Origins
-      Long history
-      ::icon(fa fa-book)
-      Popularisation
-        British popular psychology author Tony Buzan
-    Research
-      On effectiveness<br/>and features
-      On Automatic creation
-        Uses
-            Creative techniques
-            Strategic planning
-            Argument mapping
-    Tools
-      Pen and paper
-      Mermaid
-```
+* 属人性の解消  
+特定の個人しか理解できないコードを減らし、チーム全体の理解を深めることができます。
 
-```plantuml {scale: 0.7}
-@startuml
+* 心理的負担の軽減  
+タスクをチーム全体で共有することで、個人の作業負荷やプレッシャーが軽減されると感じるメンバーもいます。
 
-package "Some Group" {
-  HTTP - [First Component]
-  [Another Component]
-}
+* フロー効率の向上  
+全員が一つのタスクに集中することで、タスクの完了速度が向上し、次のタスクへの移行がスムーズになる可能性があります。これは、リソース効率よりもチーム全体の成果物の流れ（フロー効率）を重視する考え方に基づいています。
 
-node "Other Groups" {
-  FTP - [Second Component]
-  [First Component] --> FTP
-}
-
-cloud {
-  [Example 1]
-}
-
-database "MySql" {
-  folder "This is my folder" {
-    [Folder 3]
-  }
-  frame "Foo" {
-    [Frame 4]
-  }
-}
-
-[Another Component] --> [Example 1]
-[Example 1] --> [Folder 3]
-[Folder 3] --> [Frame 4]
-
-@enduml
-```
-
-</div>
-
-Learn more: [Mermaid Diagrams](https://sli.dev/features/mermaid) and [PlantUML Diagrams](https://sli.dev/features/plantuml)
-
----
-foo: bar
-dragPos:
-  square: 691,32,167,_,-16
----
-
-# Draggable Elements
-
-Double-click on the draggable elements to edit their positions.
-
-<br>
-
-###### Directive Usage
-
-```md
-<img v-drag="'square'" src="https://sli.dev/logo.png">
-```
-
-<br>
-
-###### Component Usage
-
-```md
-<v-drag text-3xl>
-  <div class="i-carbon:arrow-up" />
-  Use the `v-drag` component to have a draggable container!
-</v-drag>
-```
-
-<v-drag pos="618,206,261,_,-15">
-  <div text-center text-3xl border border-main rounded>
-    Double-click me!
-  </div>
-</v-drag>
-
-<img v-drag="'square'" src="https://sli.dev/logo.png">
-
-###### Draggable Arrow
-
-```md
-<v-drag-arrow two-way />
-```
-
-<v-drag-arrow pos="67,452,253,46" two-way op70 />
-
----
-src: ./pages/imported-slides.md
-hide: false
----
+* その他の利点  
+レビューなしでマージできる、技術負債が減る、メンバーが欠けても開発ペースが維持される、メリハリのある仕事ができる、できる人に質問が集中しなくなるなどが報告されています。
 
 ---
 
-# Monaco Editor
+# モブプログラミングの欠点
 
-Slidev provides built-in Monaco Editor support.
+* 個人時間の制約  
+すべての開発作業をモブプログラミングで行うと、個人の学習や業務目標達成のための時間が確保しづらくなる可能性があります。
 
-Add `{monaco}` to the code block to turn it into an editor:
+* 単純な問題への非効率性  
+単純で明確な解がある問題や、並列化可能なタスクには向いていません。
 
-```ts {monaco}
-import { ref } from 'vue'
-import { emptyArray } from './external'
+* 集団思考のリスク  
+一致団結を重視するあまり、批判的な意見や異なる視点が抑制される「集団思考」に陥る可能性があります。
 
-const arr = ref(emptyArray(10))
-```
+* 参加度の不均一性  
+一部のメンバーが議論についていけない、あるいは内職をしてしまうといった問題が発生する可能性があります。特にエキスパートと初心者の組み合わせでは、理解のギャップや進行速度の差、意思決定の不平等が生じやすいというアンチパターンがあります。
 
-Use `{monaco-run}` to create an editor that can execute the code directly in the slide:
+* 疲労  
+集中力が必要なため、疲れると感じるメンバーもいます。
 
-```ts {monaco-run}
-import { version } from 'vue'
-import { emptyArray, sayHello } from './external'
+* 人間関係の重要性  
+メンバー間の尊重、信頼、オープンなコミュニケーションが非常に重要であり、これが欠けると意見の衝突などがストレスにつながる可能性があります。
 
-sayHello()
-console.log(`vue ${version}`)
-console.log(emptyArray<number>(10).reduce(fib => [...fib, fib.at(-1)! + fib.at(-2)!], [1, 1]))
-```
+* ツールや環境の問題  
+リモートでの実施では、ツールの設定や接続に問題が生じることがあります。
 
 ---
-layout: center
-class: text-center
+
+# リモートモブプログラミングを成功させるための要点
+
+1. Remote Everybody  
+分散チームで適切に連携するためには、チーム全員がリモートで働くことが不可欠である、という考え方です。一部のメンバーがオンサイトで働き、他のメンバーがリモートで働く状況は、情報格差を引き起こす可能性があります。全員がリモートで働くことで、「遠隔にいるみんな」という状態になり、チームワークの実感が生まれ、孤独感を感じることなく作業に取り組むことができます。これは、リモートワークにおけるコミュニケーションと公平性の確保の重要性を示唆しています。
+
+2. Camera Always On  
+カメラを常にオンにして作業するというプラクティスです。これにより、言葉だけでなく全身を使ったコミュニケーションが可能になり、対面で作業しているかのような感覚を得られます。また、チームメンバーの表情が見えることで、集中力が高まり、気が散っている場合にすぐに気づくことができます。最初は違和感があるかもしれませんが、慣れると自然になり、チーム内での一体感を高めるのに役立ちます。メイン画面の近くにカメラを設置することで、お互いを見ながら話すように心がけることが推奨されています。これは、リモート環境での非言語コミュニケーションの不足を補うための重要な要素です。
+
+3. Regular On-Site Meetings  
+月に一度など、定期的にオンサイトで集まるというプラクティスです。リモートでのコラボレーションをより円滑にするためには、チームメンバーがお互いをよく知っていることが重要であり、対面での交流はそれを深める最良の方法です。現実世界で一緒に楽しい時間を過ごすことで、チームの絆が強まります。
+
+4. Small Team  
+チームサイズを小さく保つことが重要です。Mob Programmingはチーム全体が同じタスクに集中して取り組みますが、リモート環境では同時に話せるのは一人だけです。チームが大きすぎると、個々の発言時間が減り、集中力を維持することが難しくなり、精神的に離脱しやすくなります。また、接続問題やノイズといった技術的な問題が発生した場合に、チーム全体がブロックされる頻度が高まります。Mob Programmingの最小人数は3人ですが、ソースでは4人チームがコストパフォーマンスに優れていると報告されています。4人チームであれば、1人が不在の場合でもMobを組むことが可能です。最適なチームサイズは3〜4人であることが経験的に見出されています。
+
+5. Same Time  
+Mob Programmingの前提条件の一つである**「同じ時間に作業する」**ことをリモート環境でも実現します。ソースのチームでは、毎日少なくとも6時間はMob Programmingを行っており、そのためにコアワーキングアワーを調整し、同じランチタイムを共有しています。外部ミーティングや個人的な用事で一時的に離れることは容認されています。
+
+6. Typist and the Rest of the Mob  
+「タイピスト (Typist)」「その他のモブ (Rest of the Mob)」独断でコードを書いてはならないという制約が重要です。これにより、全員がプロセスに参加し、強い個性を持つメンバーが支配的になるのを防ぎます。タイピストはナビゲーターの指示を正確に理解し、実装に落とし込む必要があります。
+
+7. Screen Sharing  
+タイピストが自分のプライマリスクリーン（IDEを表示している画面）を共有し、チーム全員がそれを見ることで、同じ問題に集中して取り組みます。これは、抽象的な議論ではなく、実際のコードや設計図など、画面上にある形式化されたものを題材に議論することにつながり、効率的な作業を可能にします。ソースでは、共同編集可能なIDEを試した結果、メンバーが議論やタイピストを飛ばして勝手にコードを書き込む問題が発生し、かえってコラボレーションが悪化したため、タイピスト以外はタイピングしないというルールが効果的であると報告されています。リモート環境では、タイピスト以外にはショートカットがなく、言葉で説明する必要があります。画面共有にはZoomのようなツールが使用されます。画面共有の切り替えは、次のMobセッションの開始時に行うことが受け入れられています。
+
+8. 10 Minute Intervals  
+タイピストの役割を定期的にローテーションさせることが推奨されており、ソースのチームでは10分間隔でローテーションを行っています。短い間隔でのローテーションは、全員の集中力を維持し、多様な意見を取り入れるのに効果的です。ソースの別の事例では20分間隔でローテーションしており、チームの状況に合わせて適切な間隔を見つけることが重要です。ローテーションをスムーズに行うためにMobsterのようなタイマーアプリが使用されます。ローテーションの際に、ナビゲート中にフラストレーションを感じたメンバーがキーボードを乗っ取って勝手な作業をするリスクが指摘されています。
+
+9. Git Handover  
+物理的なキーボードの受け渡しができないリモート環境での課題として、ドライバーの交代をGitを使って行う方法を採用しています。一時的なブランチ上で作業し、インターバルごとにWIP (Work In Progress) コミットをプッシュします。これにより、次のタイピストは最新の状態をプルして作業を引き継ぐことができます。Mobセッションの最後に、これらのWIPコミットをまとめて、意味のあるコミットに整理してからmasterブランチにマージします。このプロセスを効率化するために、専用のツール（mobコマンド）が開発されています。
+
+10. Group Decisions  
+Mob Programmingにおいては、すべての決定がチーム全体の合意に基づいた決定となることが強調されています。多様な知識、経験、意見を議論することで、十分に検討された決定を下すことができ、後で覆す必要のあるコストのかかる決定を減らすことができます。これにより、技術的負債を最小限に抑えることができます。コードの変更やコーディングスタイルについても、全員が合意することで、コードレビューやプルリクエストの必要がなくなります。重要な決定については、Architecture Decision Recordsのような形で文書化することが推奨されています。意見の対立があった場合でも、集団での議論を通じて解決を図ります。
+
+11. Constant Momentum  
+Mob Programmingでは、チーム全体が同じタスクに集中するため、常に勢いを持続できるというメリットがあります。一人で作業していると、調査が必要になったり、次に何をすべきか分からなくなったりして手が止まることがありますが、Mob Programmingではその他のモブが常に問題を議論し、解決策を考え、次のステップを指示するため、タイピストがブロックされることがありません。これにより、個人で作業するよりもはるかに速いペースで進捗し、やりがいのあるフローに入ることができます。
+
+12. Learn from the Team  
+チームメンバー間での継続的な学習と知識共有は、Mob Programmingの中心的なメリットの一つです。すべての作業が詳細な議論の結果として行われるため、なぜそのようにするのかを全員が理解し、そこから学びが得られます。チームメンバーは異なる背景や視点を持っており、ユニットテストの書き方、デバッグ方法、会議の準備の仕方など、様々なスキルや知識を学び合います。新しい技術やフレームワークの学習にも効果的です。また、コードベースの構造やシステム間の相互作用について、チーム全体で共通の理解を持つことができます。経験の浅いメンバーのオンボーディングも促進され、通常よりも短期間でチームに貢献できるようになります。
+
+13. Trust  
+リモートワークでは、マネジメントがチームの作業状況を直接「見る」ことができないため、チームの生産性に対する懸念が生じやすいです。リモートMob Programmingでは、チームの自己組織化に対する信頼が不可欠です。この信頼は、チームが積極的にコミュニケーションを取り、コミットメントを常に守り、高品質なコードを期限内に納品することで築かれます。毎日のチェックイン（日々の出来事や計画通りに進まなかったことなどを簡潔に共有）をチャットチャンネルで行うことで、マネジメントもチームの状況を把握し、信頼を深めることができます。
+
+14. Save the Planet  
+Mob Programmingは、不要な出張や通勤を減らし、環境負荷を低減するという側面も持っています。リモートMob Programmingであれば、物理的な移動が不要になり、交通渋滞やそれに伴う温室効果ガスの排出を防ぐことができます。これは、環境への配慮という点からもメリットとなり得ます。
+
+15. Dine with your Family  
+リモートMob Programmingは、仕事とプライベート（家族との時間など）のバランスを取りやすくするという個人的なメリットも提供します。特に、やりがいのある仕事と家族との質の高い時間を両立することは難しい場合がありますが、リモートで作業することで、通勤時間がなくなり、家族との時間をより多く持つことができるようになります。ソースの執筆者たちは、幼い子供を持つ親であり、この点を重要なメリットとして挙げています。
+
+# モブワークでのリスク
+
+効率の悪いことをやっていると、パフォーマンスの悪化具合が高い
+
 ---
 
-# Learn More
+# 既存のドキュメント管理だけでは解決できない問題
 
-[Documentation](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/resources/showcases)
+* プロジェクト初期や試行錯誤段階での未体系化知識の共有の難しさ
+* ADRやDesignDocでは捉えきれない「知識が創造される瞬間」の共有
+* チームが共に考え、発見する機会の不足
 
-<div class="flex justify-center">
+一緒に知識を獲得していく
 
-<QRCode value="https://github.com/k2tzumi/slidev-boilerplate" color="0e0c0d" image="github-mark.svg" />
 
-</div>
 
-<PoweredBySlidev mt-10 />
+---
 
+# 未知の課題に対する集合知で取り組んだ事例
+
+
+---
+
+# 参考資料
+
+* [Mob Programming and its impact on the developer's well-being and individual performance](https://www.diva-portal.org/smash/get/diva2:1442517/FULLTEXT01.pdf)
+* [Remote Mob Programming](https://www.remotemobprogramming.org/)
