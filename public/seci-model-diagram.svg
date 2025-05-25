@@ -52,11 +52,15 @@
       <stop offset="0%" style="stop-color:#c6e1ff;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#3366cc;stop-opacity:1" />
     </linearGradient>
+    <linearGradient id="gradTopTriangle" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0044aa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6699ff;stop-opacity:1" />
+    </linearGradient>
   </defs>
   <!-- 四角部分 -->
   <rect x="130" y="70" width="540" height="40" fill="url(#gradTop)" stroke="#333" stroke-width="2" />
   <!-- 三角部分 -->
-  <polygon points="670,90 630,70 630,110" fill="#3366cc" stroke="#333" stroke-width="2" />
+  <polygon points="670,90 630,70 630,110" fill="url(#gradTopTriangle)" stroke="#333" stroke-width="2" />
   <text x="380" y="95" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#444">暗黙知 → 暗黙知</text>
   
   <!-- 右側の暗黙知→形式知の矢印 (対話場からシステム場へ) -->
@@ -65,11 +69,15 @@
       <stop offset="0%" style="stop-color:#ffeedd;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#cc6633;stop-opacity:1" />
     </linearGradient>
+    <linearGradient id="gradRightTriangle" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#aa4400;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff9966;stop-opacity:1" />
+    </linearGradient>
   </defs>
   <!-- 四角部分 -->
   <rect x="710" y="160" width="40" height="280" fill="url(#gradRight)" stroke="#333" stroke-width="2" />
   <!-- 三角部分 -->
-  <polygon points="730,440 710,400 750,400" fill="#cc6633" stroke="#333" stroke-width="2" />
+  <polygon points="730,440 710,400 750,400" fill="url(#gradRightTriangle)" stroke="#333" stroke-width="2" />
   <text x="730" y="285" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#444" transform="rotate(90 730,285)">暗黙知 → 形式知</text>
   
   <!-- 下部の形式知←形式知の矢印 (システム場から実践場へ) - テキストのみ修正 -->
@@ -78,11 +86,15 @@
       <stop offset="0%" style="stop-color:#ccffcc;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#336633;stop-opacity:1" />
     </linearGradient>
+    <linearGradient id="gradBottomTriangle" x1="100%" y1="0%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#004400;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#66cc66;stop-opacity:1" />
+    </linearGradient>
   </defs>
   <!-- 四角部分 - 元のまま -->
   <rect x="130" y="490" width="540" height="40" fill="url(#gradBottom)" stroke="#333" stroke-width="2" />
   <!-- 三角部分 - 元の位置に戻す -->
-  <polygon points="130,510 170,490 170,530" fill="#336633" stroke="#333" stroke-width="2" />
+  <polygon points="130,510 170,490 170,530" fill="url(#gradBottomTriangle)" stroke="#333" stroke-width="2" />
   <text x="420" y="515" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#444">形式知 ← 形式知</text>
   
   <!-- 左側の形式知→暗黙知の矢印 (実践場から創発場へ) -->
@@ -91,11 +103,15 @@
       <stop offset="0%" style="stop-color:#ffccee;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#cc3366;stop-opacity:1" />
     </linearGradient>
+    <linearGradient id="gradLeftTriangle" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#aa0044;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff6699;stop-opacity:1" />
+    </linearGradient>
   </defs>
   <!-- 四角部分 -->
   <rect x="50" y="160" width="40" height="280" fill="url(#gradLeft)" stroke="#333" stroke-width="2" />
   <!-- 三角部分 -->
-  <polygon points="70,160 50,200 90,200" fill="#cc3366" stroke="#333" stroke-width="2" />
+  <polygon points="70,160 50,200 90,200" fill="url(#gradLeftTriangle)" stroke="#333" stroke-width="2" />
   <text x="70" y="315" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#444" transform="rotate(-90 70,315)">形式知 → 暗黙知</text>
   
   <!-- 1. 共同化 (Socialization) -->
