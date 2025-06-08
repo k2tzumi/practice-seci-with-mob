@@ -1,5 +1,8 @@
 # Changelog
 
+## [v0.0.1](https://github.com/k2tzumi/practice-seci-with-mob/commits/v0.0.1) - 2025-06-08
+- Initial by @k2tzumi in https://github.com/k2tzumi/practice-seci-with-mob/pull/1
+
 ## [v0.1.11](https://github.com/k2tzumi/slidev-boilerplate/compare/v0.1.10...v0.1.11) - 2025-05-17
 - bump up version by @k2tzumi in https://github.com/k2tzumi/slidev-boilerplate/pull/99
 
