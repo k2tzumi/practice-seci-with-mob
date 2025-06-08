@@ -2,6 +2,31 @@
 
 This repository is a **Slidev** template repository for creating presentation slides. Please follow these guidelines to assist with code and content creation/editing.
 
+## GitHub Issue Workflow with Copilot Agent Mode
+
+When starting work from a GitHub issue using Copilot Agent mode:
+
+### Branch Creation from Issues
+1. **Analyze the issue**: Read the issue title, description, and labels to understand the work scope
+2. **Create descriptive branch name**: Use the format `issue-{number}-{descriptive-name}`
+3. **Branch naming conventions**:
+   - Use kebab-case (lowercase with hyphens)
+   - Include issue number for traceability
+   - Add descriptive keywords from issue title
+   - Keep under 50 characters when possible
+
+### Branch Naming Examples
+- Issue #15 "Add dark theme support" → `issue-15-add-dark-theme`
+- Issue #32 "Fix PDF export layout" → `issue-32-fix-pdf-export-layout`  
+- Issue #8 "Update slide templates" → `issue-8-update-slide-templates`
+- Issue #41 "Implement new Transform component" → `issue-41-implement-transform-component`
+
+### Workflow Steps
+1. **Branch creation**: `git checkout -b issue-{number}-{descriptive-name}`
+2. **Work implementation**: Follow the development guidelines below
+3. **Commit messages**: Reference issue number in commits (`fix #15: implement dark theme`)
+4. **Pull request**: Create PR that links back to the original issue
+
 ## Project Overview
 
 - **Purpose**: Create presentation slides using Slidev
