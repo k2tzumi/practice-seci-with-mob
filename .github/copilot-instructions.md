@@ -70,22 +70,22 @@ title: 🚀 Presentation Title
 ---
 
 # 📊 Title Slide
-Subtitle or introduction with visual context
+Subtitle with <span v-mark.underline.blue>important concept</span>
 
 ---
 
 # 💡 Content Slide
-- ✅ Point 1 (completed)
-- ⚠️ Point 2 (in progress)
-- 🚀 Action item (upcoming)
-- <logos-vue /> Built with Vue.js
+- ✅ <span v-mark="{ type: 'highlight', color: 'green', at: 1 }">Completed task</span>
+- ⚠️ <span v-mark="{ type: 'highlight', color: 'orange', at: 2 }">In progress</span>
+- 🚀 <span v-mark="{ type: 'circle', color: 'blue', at: 3 }">Action item</span>
+- <logos-vue /> Built with <span v-mark.box.purple>Vue.js</span>
 
 ---
 layout: center
 ---
 
 # ✨ Center-aligned Slide
-📈 Growing Success
+📈 <span v-mark.circle.red>Growing Success</span>
 ```
 
 ## Guidelines for Code Creation/Editing
@@ -127,6 +127,49 @@ layout: center
 - **UnoCSS**: Style with utility classes
 - **Scoped CSS**: Custom styles for individual slides
 - **MDC Syntax**: Easy style application
+- **v-mark emphasis**: Replace bold markdown (`**text**`) with v-mark directive for semantic highlighting
+
+### v-mark Directive for Text Emphasis
+Use v-mark instead of markdown bold (`**text**`) for better semantic meaning and visual presentation:
+
+#### Basic v-mark Usage
+```markdown
+<span v-mark.underline.red>Important concept</span>
+<span v-mark.circle.blue>Key term</span>
+<span v-mark.highlight.yellow>Critical information</span>
+```
+
+#### Semantic Consistency Rules
+- **Same meaning = Same type**: Use consistent mark types for semantically similar content
+  - Key concepts: `v-mark.underline.blue`
+  - Important warnings: `v-mark.highlight.orange`
+  - Action items: `v-mark.circle.green`
+  - Technical terms: `v-mark.box.purple`
+
+#### Animation Timing with `at` Parameter
+```markdown
+<!-- Emphasize together (same timing) -->
+<span v-mark="{ type: 'underline', color: 'blue', at: 1 }">First point</span>
+<span v-mark="{ type: 'underline', color: 'blue', at: 1 }">Related point</span>
+
+<!-- Emphasize in sequence -->
+<span v-mark="{ type: 'circle', color: 'red', at: 2 }">Step 1</span>
+<span v-mark="{ type: 'circle', color: 'red', at: 3 }">Step 2</span>
+```
+
+#### Available Mark Types
+Based on rough-notation library:
+- `underline`: Sketchy underline below text
+- `box`: Box around the element  
+- `circle`: Circle around the element
+- `highlight`: Highlighter effect
+- `strike-through`: Horizontal line over text
+- `crossed-off`: Two diagonal lines crossing out text
+
+#### Color Guidelines
+- Use UnoCSS color names: `red`, `blue`, `green`, `yellow`, `purple`, `orange`, `pink`
+- For custom colors: `v-mark="{ color: '#ff6b6b', type: 'underline' }"`
+- Maintain color consistency for semantic groups
 
 ### Design with PDF Output in Mind
 - **Visual confirmation**: Always check PDF output with `make pdf`
@@ -214,16 +257,19 @@ When providing suggestions or generating content:
 
 ### Slide Titles
 - Use clear, descriptive titles with relevant emojis (🔍 Analysis, 📈 Results, 🎯 Goals)
+- Apply v-mark for key terms in titles: `# 📊 <span v-mark.underline.blue>Data Analysis</span> Results`
 - Maintain consistent formatting
 - Consider title length for PDF display
 
 ### Content Organization
 - One main concept per slide
 - Use bullet points with emojis first (✅ ⚠️ 🚀), Iconify icons only when needed
+- Replace markdown bold (`**text**`) with semantic v-mark: `<span v-mark.underline.blue>key term</span>`
 - Break complex topics into multiple slides
 - Use Transform component to scale content: `<Transform :scale="0.8">content</Transform>`
 - Optimize scale values to fit maximum content while maintaining readability
 - Add contextual emojis to section headers and key points
+- Group related v-mark elements with same type and color for consistency
 
 ### Code Examples
 - Include proper syntax highlighting
@@ -231,6 +277,7 @@ When providing suggestions or generating content:
 - Provide context and explanations
 - Use tech logos from Iconify for specific languages: `<logos-javascript />`, `<logos-python />`, `<logos-typescript />`
 - Prefer emojis for general programming concepts: 💻 🔧 ⚙️ 🐛
+- Mark important code concepts with v-mark: `<span v-mark.box.green>key function</span>`
 
 ### Visual Elements
 - Optimize images for both web and print
@@ -239,4 +286,4 @@ When providing suggestions or generating content:
 - **Emoji-first approach**: Use emojis for general concepts, supplement with Iconify for technical specifics
 - Use emoji status indicators for lists: ✅ Complete, ⚠️ In Progress, 🚀 Coming Soon, 🆕 New
 
-Remember: The final presentation will be primarily consumed as a PDF, so all design and content decisions should prioritize PDF readability and professional appearance. Use the Transform component strategically to scale content (text, images, tables) to fit optimally within each slide while maximizing readability. Enhance text-heavy content with appropriate emojis and Iconify icons to improve visual engagement and comprehension, while maintaining professional standards.
+Remember: The final presentation will be primarily consumed as a PDF, so all design and content decisions should prioritize PDF readability and professional appearance. Use the Transform component strategically to scale content (text, images, tables) to fit optimally within each slide while maximizing readability. Enhance text-heavy content with appropriate emojis and Iconify icons to improve visual engagement and comprehension, while maintaining professional standards. Replace markdown bold formatting with semantic v-mark directives for better visual presentation and meaning consistency.
