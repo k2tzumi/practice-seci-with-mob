@@ -1,0 +1,144 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect x="0" y="0" width="800" height="600" fill="#f5f5f5" />
+  
+  <!-- タイトル -->
+  <rect x="100" y="20" width="600" height="60" fill="#ffdd57" rx="10" />
+  <text x="400" y="60" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#333">SECIモデル 4つのプロセス</text>
+  
+  <!-- 中央の縦線と横線 - サークル付き -->
+  <line x1="400" y1="100" x2="400" y2="500" stroke="#333" stroke-width="2" />
+  <line x1="100" y1="300" x2="700" y2="300" stroke="#333" stroke-width="2" />
+  <circle cx="400" cy="300" r="60" fill="none" stroke="#333" stroke-width="2" stroke-dasharray="5,5" />
+  
+  <!-- オレンジ色の手書き風矢印 - 添付イメージの反映 -->
+  <!-- 右上（共同化→表出化） -->
+  <path d="M 420 255 L 450 255 L 435 235 Z" fill="#ff9933" stroke="#ff6600" stroke-width="1.5" />
+  
+  <!-- 右下（表出化→連結化） -->
+  <path d="M 450 345 L 450 315 L 470 330 Z" fill="#ff9933" stroke="#ff6600" stroke-width="1.5" />
+  
+  <!-- 左下（連結化→内面化） -->
+  <path d="M 380 345 L 350 345 L 365 365 Z" fill="#ff9933" stroke="#ff6600" stroke-width="1.5" />
+  
+  <!-- 左上（内面化→共同化） -->
+  <path d="M 350 255 L 350 285 L 330 270 Z" fill="#ff9933" stroke="#ff6600" stroke-width="1.5" />
+  
+  <!-- サークル矢印 - 手書き風に調整 -->
+  <path d="M 400 240 A 60 60 0 0 1 460 300 A 60 60 0 0 1 400 360 A 60 60 0 0 1 340 300 A 60 60 0 0 1 400 240 Z" 
+        fill="none" stroke="#333" stroke-width="2" stroke-dasharray="5,5" />
+  
+  <!-- 4つの場を示す円形 -->
+  <!-- 創発場 -->
+  <circle cx="70" cy="100" r="60" fill="#333" />
+  <text x="70" y="105" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">創発場</text>
+  
+  <!-- 対話場 -->
+  <circle cx="730" cy="100" r="60" fill="#333" />
+  <text x="730" y="105" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">対話場</text>
+  
+  <!-- システム場 -->
+  <circle cx="730" cy="500" r="60" fill="#333" />
+  <text x="730" y="490" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">システム</text>
+  <text x="730" y="515" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">場</text>
+  
+  <!-- 実践場 -->
+  <circle cx="70" cy="500" r="60" fill="#333" />
+  <text x="70" y="505" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">実践場</text>
+  
+  <!-- 上部の暗黙知→暗黙知の矢印 (創発場から対話場へ) -->
+  <defs>
+    <linearGradient id="gradTop" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#c6e1ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3366cc;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gradTopTriangle" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0044aa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6699ff;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- 四角部分 -->
+  <rect x="130" y="70" width="540" height="40" fill="url(#gradTop)" stroke="#333" stroke-width="2" />
+  <!-- 三角部分 -->
+  <polygon points="670,90 630,70 630,110" fill="url(#gradTopTriangle)" stroke="#333" stroke-width="2" />
+  <text x="380" y="95" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#444">暗黙知 → 暗黙知</text>
+  
+  <!-- 右側の暗黙知→形式知の矢印 (対話場からシステム場へ) -->
+  <defs>
+    <linearGradient id="gradRight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffeedd;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#cc6633;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gradRightTriangle" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#aa4400;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff9966;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- 四角部分 -->
+  <rect x="710" y="160" width="40" height="280" fill="url(#gradRight)" stroke="#333" stroke-width="2" />
+  <!-- 三角部分 -->
+  <polygon points="730,440 710,400 750,400" fill="url(#gradRightTriangle)" stroke="#333" stroke-width="2" />
+  <text x="730" y="285" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#444" transform="rotate(90 730,285)">暗黙知 → 形式知</text>
+  
+  <!-- 下部の形式知←形式知の矢印 (システム場から実践場へ) - テキストのみ修正 -->
+  <defs>
+    <linearGradient id="gradBottom" x1="100%" y1="0%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#ccffcc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#336633;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gradBottomTriangle" x1="100%" y1="0%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#004400;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#66cc66;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- 四角部分 - 元のまま -->
+  <rect x="130" y="490" width="540" height="40" fill="url(#gradBottom)" stroke="#333" stroke-width="2" />
+  <!-- 三角部分 - 元の位置に戻す -->
+  <polygon points="130,510 170,490 170,530" fill="url(#gradBottomTriangle)" stroke="#333" stroke-width="2" />
+  <text x="420" y="515" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#444">形式知 ← 形式知</text>
+  
+  <!-- 左側の形式知→暗黙知の矢印 (実践場から創発場へ) -->
+  <defs>
+    <linearGradient id="gradLeft" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#ffccee;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#cc3366;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gradLeftTriangle" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#aa0044;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff6699;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- 四角部分 -->
+  <rect x="50" y="160" width="40" height="280" fill="url(#gradLeft)" stroke="#333" stroke-width="2" />
+  <!-- 三角部分 -->
+  <polygon points="70,160 50,200 90,200" fill="url(#gradLeftTriangle)" stroke="#333" stroke-width="2" />
+  <text x="70" y="315" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#444" transform="rotate(-90 70,315)">形式知 → 暗黙知</text>
+  
+  <!-- 1. 共同化 (Socialization) -->
+  <rect x="140" y="140" width="220" height="120" rx="10" fill="#e6f2ff" stroke="#3366cc" stroke-width="2" />
+  <text x="250" y="175" font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#3366cc">共同化</text>
+  <text x="250" y="205" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#333">Socialization</text>
+  <text x="250" y="230" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#666">共通の体験を通じて</text>
+  <text x="250" y="250" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#666">暗黙知を移転させるプロセス</text>
+  
+  <!-- 2. 表出化 (Externalization) -->
+  <rect x="440" y="140" width="220" height="120" rx="10" fill="#fff2e6" stroke="#cc6633" stroke-width="2" />
+  <text x="550" y="175" font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#cc6633">表出化</text>
+  <text x="550" y="205" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#333">Externalization</text>
+  <text x="550" y="230" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#666">個人の暗黙知を言語化し</text>
+  <text x="550" y="250" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#666">メンバーと共有するプロセス</text>
+  
+  <!-- 3. 連結化 (Combination) -->
+  <rect x="440" y="340" width="220" height="120" rx="10" fill="#e6ffe6" stroke="#336633" stroke-width="2" />
+  <text x="550" y="375" font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#336633">連結化</text>
+  <text x="550" y="405" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#333">Combination</text>
+  <text x="550" y="430" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#666">異なる形式知を組み合わせて</text>
+  <text x="550" y="450" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#666">新たな知を創出するプロセス</text>
+  
+  <!-- 4. 内面化 (Internalization) -->
+  <rect x="140" y="340" width="220" height="120" rx="10" fill="#ffe6f2" stroke="#cc3366" stroke-width="2" />
+  <text x="250" y="375" font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#cc3366">内面化</text>
+  <text x="250" y="405" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#333">Internalization</text>
+  <text x="250" y="430" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#666">新たに得た形式知を</text>
+  <text x="250" y="450" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#666">学習により体得するプロセス</text>
+</svg>
