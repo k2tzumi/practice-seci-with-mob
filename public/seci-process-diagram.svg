@@ -1,0 +1,83 @@
+<svg viewBox="0 0 1000 700" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="1000" height="700" fill="#f8f9fa"/>
+  
+  <!-- タイトル -->
+  <text x="500" y="40" text-anchor="middle" font-size="24" font-weight="bold" fill="#2c3e50">
+    SECIプロセスと4つの場の関連
+  </text>
+  
+  <!-- 4つの場のボックス -->
+  <!-- 創発場 -->
+  <rect x="50" y="80" width="400" height="140" fill="#e8f5e8" stroke="#4caf50" stroke-width="2" rx="10"/>
+  <text x="250" y="110" text-anchor="middle" font-size="18" font-weight="bold" fill="#2e7d32">創発場</text>
+  <text x="70" y="135" font-size="14" fill="#2e7d32">対応プロセス: 共同化 (Socialization)</text>
+  <text x="70" y="155" font-size="14" fill="#2e7d32">知識変換: 暗黙知→暗黙知</text>
+  <text x="70" y="175" font-size="14" fill="#2e7d32">主な目的: 体験共有・自然な交流</text>
+  <text x="70" y="195" font-size="14" fill="#2e7d32">環境特性: インフォーマル・リラックス</text>
+  
+  <!-- 対話場 -->
+  <rect x="550" y="80" width="400" height="140" fill="#e3f2fd" stroke="#2196f3" stroke-width="2" rx="10"/>
+  <text x="750" y="110" text-anchor="middle" font-size="18" font-weight="bold" fill="#1565c0">対話場</text>
+  <text x="570" y="135" font-size="14" fill="#1565c0">対応プロセス: 表出化 (Externalization)</text>
+  <text x="570" y="155" font-size="14" fill="#1565c0">知識変換: 暗黙知→形式知</text>
+  <text x="570" y="175" font-size="14" fill="#1565c0">主な目的: 議論・言語化・明文化</text>
+  <text x="570" y="195" font-size="14" fill="#1565c0">環境特性: 構造化・目的志向</text>
+  
+  <!-- システム場 -->
+  <rect x="50" y="280" width="400" height="140" fill="#fff3e0" stroke="#ff9800" stroke-width="2" rx="10"/>
+  <text x="250" y="310" text-anchor="middle" font-size="18" font-weight="bold" fill="#e65100">システム場</text>
+  <text x="70" y="335" font-size="14" fill="#e65100">対応プロセス: 連結化 (Combination)</text>
+  <text x="70" y="355" font-size="14" fill="#e65100">知識変換: 形式知→形式知</text>
+  <text x="70" y="375" font-size="14" fill="#e65100">主な目的: 統合・組み合わせ・創出</text>
+  <text x="70" y="395" font-size="14" fill="#e65100">環境特性: 情報統合・リアルタイム</text>
+  
+  <!-- 実践場 -->
+  <rect x="550" y="280" width="400" height="140" fill="#fce4ec" stroke="#e91e63" stroke-width="2" rx="10"/>
+  <text x="750" y="310" text-anchor="middle" font-size="18" font-weight="bold" fill="#ad1457">実践場</text>
+  <text x="570" y="335" font-size="14" fill="#ad1457">対応プロセス: 内面化 (Internalization)</text>
+  <text x="570" y="355" font-size="14" fill="#ad1457">知識変換: 形式知→暗黙知</text>
+  <text x="570" y="375" font-size="14" fill="#ad1457">主な目的: 個人実践・体得・習得</text>
+  <text x="570" y="395" font-size="14" fill="#ad1457">環境特性: 個人中心・反復練習</text>
+  
+  <!-- SECIサイクルの矢印 -->
+  <!-- S→E (創発場→対話場) -->
+  <path d="M 450 150 Q 500 120 550 150" fill="none" stroke="#666" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <text x="500" y="135" text-anchor="middle" font-size="12" font-weight="bold" fill="#666">S→E</text>
+  
+  <!-- E→C (対話場→システム場) -->
+  <path d="M 750 220 Q 780 250 750 280" fill="none" stroke="#666" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <text x="780" y="250" text-anchor="middle" font-size="12" font-weight="bold" fill="#666">E→C</text>
+  
+  <!-- I→C (実践場→システム場) -->
+  <path d="M 550 350 Q 500 380 450 350" fill="none" stroke="#666" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <text x="500" y="395" text-anchor="middle" font-size="12" font-weight="bold" fill="#666">I→C</text>
+  
+  <!-- C→S (システム場→創発場) -->
+  <path d="M 250 280 Q 220 250 250 220" fill="none" stroke="#666" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <text x="220" y="250" text-anchor="middle" font-size="12" font-weight="bold" fill="#666">C→S</text>
+  
+  <!-- 中央のサイクル表示 -->
+  <circle cx="500" cy="250" r="80" fill="none" stroke="#9c27b0" stroke-width="3" stroke-dasharray="10,5"/>
+  <text x="500" y="255" text-anchor="middle" font-size="16" font-weight="bold" fill="#9c27b0">SECIサイクル</text>
+  
+  <!-- 知識創造の流れを示す説明 -->
+  <rect x="100" y="480" width="800" height="180" fill="#f5f5f5" stroke="#757575" stroke-width="1" rx="10"/>
+  <text x="500" y="510" text-anchor="middle" font-size="16" font-weight="bold" fill="#424242">知識創造プロセスの流れ</text>
+  
+  <text x="120" y="540" font-size="14" fill="#424242">1. 創発場 (Socialization): 暗黙知の共有 - 体験や感覚を通じた知識の伝達</text>
+  <text x="120" y="565" font-size="14" fill="#424242">2. 対話場 (Externalization): 暗黙知の形式化 - 議論や対話を通じた知識の言語化</text>
+  <text x="120" y="590" font-size="14" fill="#424242">3. システム場 (Combination): 形式知の統合 - 既存知識の組み合わせによる新知識創出</text>
+  <text x="120" y="615" font-size="14" fill="#424242">4. 実践場 (Internalization): 形式知の体得 - 実践を通じた知識の内面化と習得</text>
+  
+  <text x="500" y="645" text-anchor="middle" font-size="12" font-style="italic" fill="#666">
+    このサイクルを繰り返すことで、組織全体の知識創造が促進される
+  </text>
+  
+  <!-- 矢印のマーカー定義 -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+    </marker>
+  </defs>
+</svg>
