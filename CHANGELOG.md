@@ -1,5 +1,9 @@
 # Changelog
 
+## [v0.0.2](https://github.com/k2tzumi/practice-seci-with-mob/compare/v0.0.1...v0.0.2) - 2025-06-17
+- Add Instruction files by @k2tzumi in https://github.com/k2tzumi/practice-seci-with-mob/pull/9
+- Bonsai by @k2tzumi in https://github.com/k2tzumi/practice-seci-with-mob/pull/16
+
 ## [v0.0.1](https://github.com/k2tzumi/practice-seci-with-mob/commits/v0.0.1) - 2025-06-08
 - Initial by @k2tzumi in https://github.com/k2tzumi/practice-seci-with-mob/pull/1
 
