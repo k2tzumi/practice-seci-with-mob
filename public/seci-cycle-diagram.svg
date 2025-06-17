@@ -1,0 +1,100 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#2c3e50">
+    🔄 サイクル全体を通じた工夫
+  </text>
+  
+  <!-- 中央の円形サイクル -->
+  <circle cx="400" cy="300" r="180" fill="none" stroke="#3498db" stroke-width="3" stroke-dasharray="5,5"/>
+  
+  <!-- 段階的モード切替のタイトル -->
+  <text x="400" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2c3e50">
+    段階的モード切替
+  </text>
+  
+  <!-- 1. 創発場（上） -->
+  <g transform="translate(400, 180)">
+    <circle cx="0" cy="0" r="40" fill="#e74c3c" opacity="0.8"/>
+    <text x="0" y="-5" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white" font-weight="bold">創発場</text>
+    <text x="0" y="8" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">S</text>
+    <text x="60" y="0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">リラックスした雑談から開始</text>
+  </g>
+  
+  <!-- 2. 対話場（右） -->
+  <g transform="translate(550, 300)">
+    <circle cx="0" cy="0" r="40" fill="#f39c12" opacity="0.8"/>
+    <text x="0" y="-5" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white" font-weight="bold">対話場</text>
+    <text x="0" y="8" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">E</text>
+    <text x="60" y="0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">構造化された振り返りと言語化</text>
+  </g>
+  
+  <!-- 3. システム場（下） -->
+  <g transform="translate(400, 420)">
+    <circle cx="0" cy="0" r="40" fill="#27ae60" opacity="0.8"/>
+    <text x="0" y="-5" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white" font-weight="bold">システム場</text>
+    <text x="0" y="8" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">C</text>
+    <text x="60" y="0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">他チームとの知識統合</text>
+  </g>
+  
+  <!-- 4. 実践場（左） -->
+  <g transform="translate(250, 300)">
+    <circle cx="0" cy="0" r="40" fill="#9b59b6" opacity="0.8"/>
+    <text x="0" y="-5" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white" font-weight="bold">実践場</text>
+    <text x="0" y="8" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">I</text>
+    <text x="-60" y="0" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">個人でのソロワーク実践</text>
+  </g>
+  
+  <!-- 新しいサイクルの説明テキスト -->
+  <g transform="translate(320, 240)">
+    <text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50" font-weight="bold">個人の体験を持ち寄り</text>
+  </g>
+  
+  <!-- 矢印 -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3498db"/>
+    </marker>
+  </defs>
+  
+  <!-- 1→2（創発場→対話場） -->
+  <path d="M 440 180 A 120 120 0 0 1 550 260" fill="none" stroke="#3498db" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- 2→3（対話場→システム場） -->
+  <path d="M 550 340 A 120 120 0 0 1 440 420" fill="none" stroke="#3498db" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- 3→4（システム場→実践場） -->
+  <path d="M 360 420 A 120 120 0 0 1 250 340" fill="none" stroke="#3498db" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- 4→1（実践場→創発場：新しいサイクル） -->
+  <path d="M 250 260 A 120 120 0 0 1 360 180" fill="none" stroke="#3498db" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- 適応的モード選択 -->
+  <g transform="translate(100, 450)">
+    <rect x="0" y="0" width="600" height="120" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="1" rx="10"/>
+    <text x="300" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2c3e50">
+      適応的モード選択
+    </text>
+    <text x="20" y="50" font-family="Arial, sans-serif" font-size="14" fill="#2c3e50">
+      • タスクの性質に応じた場の選択
+    </text>
+    <text x="20" y="70" font-family="Arial, sans-serif" font-size="14" fill="#2c3e50">
+      • チームの状態に応じたモード調整
+    </text>
+    <text x="20" y="90" font-family="Arial, sans-serif" font-size="14" fill="#2c3e50">
+      • 学習段階に応じて重点を変更する
+    </text>
+  </g>
+  
+  <!-- 利点 -->
+  <g transform="translate(50, 100)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2c3e50">利点:</text>
+    <text x="0" y="20" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• 知識創造サイクルの加速</text>
+    <text x="0" y="40" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• 多様な視点・知識の共有</text>
+    <text x="0" y="60" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• 個人知の組織資産化</text>
+    <text x="0" y="80" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• 新メンバーの自然な参加</text>
+  </g>
+  
+</svg>
