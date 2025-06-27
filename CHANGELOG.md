@@ -1,5 +1,8 @@
 # Changelog
 
+## [v0.0.5](https://github.com/k2tzumi/practice-seci-with-mob/compare/v0.0.4...v0.0.5) - 2025-06-27
+- Update GitHub link in slides by @k2tzumi in https://github.com/k2tzumi/practice-seci-with-mob/pull/29
+
 ## [v0.0.4](https://github.com/k2tzumi/practice-seci-with-mob/compare/v0.0.3...v0.0.4) - 2025-06-27
 - Refine slide content and update dependencies by @k2tzumi in https://github.com/k2tzumi/practice-seci-with-mob/pull/27
 
