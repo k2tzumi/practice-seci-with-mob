@@ -27,7 +27,7 @@ addons:
 
 # モブワークによるSECIモデルの実践
 PHP Conference Japan 2025 Jun 28, 2025.  
-v0.0.3  
+v0.0.4  
 @katzumi(かつみ)
 
 <div class="pt-12">
