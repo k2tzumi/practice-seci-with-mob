@@ -1,5 +1,8 @@
 # Changelog
 
+## [v0.0.6](https://github.com/k2tzumi/practice-seci-with-mob/compare/v0.0.5...v0.0.6) - 2025-06-28
+- fix: improve clarity and grammar in presentation slides by @k2tzumi in https://github.com/k2tzumi/practice-seci-with-mob/pull/31
+
 ## [v0.0.5](https://github.com/k2tzumi/practice-seci-with-mob/compare/v0.0.4...v0.0.5) - 2025-06-27
 - Update GitHub link in slides by @k2tzumi in https://github.com/k2tzumi/practice-seci-with-mob/pull/29
 
